@@ -16,6 +16,6 @@ public class WebSocketConfig implements WebSocketConfigurer {
     private  final StockPriceWebSocketHandler stockPriceWebSocketHandler;
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(stockPriceWebSocketHandler, "stock").setAllowedOrigins("*").withSockJS();
+        registry.addHandler(stockPriceWebSocketHandler, "stock").setAllowedOriginPatterns("*");
     }
 }
