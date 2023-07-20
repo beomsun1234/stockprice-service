@@ -7,7 +7,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.test.annotation.DirtiesContext;
 
-@SpringBootTest(properties = "spring.profiles.active=test")
+@SpringBootTest(properties = "spring.profiles.active=test", webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DirtiesContext
 @EmbeddedKafka(partitions = 1, topics = "stock", brokerProperties = { "listeners=PLAINTEXT://localhost:9092", "port=9092" })
