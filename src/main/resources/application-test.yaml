@@ -6,3 +6,7 @@ spring:
     activate:
       on-profile: test
 
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers: localhost:9092
